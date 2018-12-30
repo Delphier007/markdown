@@ -1,0 +1,182 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="ie=edge"/><title>Markdown</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css"/><!--link(href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO", crossorigin="anonymous")--></head><body><h1>- SINTAXIS BÁSICA DE MAKDOWN</h1><h2>Esto es un h2 desde un markdown-it sin include</h2>
+<p>Esto es un párrafo del markdown-it sin include. Para saber que está dentro del comando MARKDOWN-IT deben estar indentados</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora in, exercitationem cumque error porro ipsam dicta, velit sed, nobis sint inventore laudantium non omnis. Eum</p>
+<!--include:markdown-it(html) ./notas.md--><h1>Esto es un h1</h1>
+<h2>Esto es un h2</h2>
+<h3>Esto es un h3 (y así hasta el 6)</h3>
+<p>Esto es un párrafo. No hay que escribir nada solo separlo por una línea en blanco. Si dejamos un SOLO ESPACIO y damos un retorno de carro sigue siendo el mismo párrafo y la misma línea.<br>
+Pero si dejamos 2 ESPACIOS Y UN RETORNO DE CARRO estamos en el mismo párrafo pero con salto de línea</p>
+<p>Para que se genere otro párrafo distinto, dejamos dos líneas entre ambos</p>
+<p>Para generar listas desordenadas podemos utilizar *, + y -</p>
+<ul>
+<li>Generado con *</li>
+</ul>
+<ul>
+<li>Generado con +</li>
+</ul>
+<ul>
+<li>Generado con -
+<ul>
+<li>Subnivel con un TAB</li>
+<li>Subnivel con un TAB</li>
+</ul>
+</li>
+</ul>
+<p>Las listas ordenadas se generan numerando con el número y un punto detrás.</p>
+<ol>
+<li>
+<p>Uno</p>
+</li>
+<li>
+<p>Dos</p>
+</li>
+<li>
+<p>Tres</p>
+<p>1.1. Subnivel (con 4 espacios o 2TABs porque yo lo tengo configurado en VS Code como TAB=2 espacios)</p>
+<ol>
+<li>Subnivel
+<ul>
+<li>Se pueden combinar listas sin ordenar y ordenadas</li>
+<li>En esta vamos a hacer otro nivel ordenado</li>
+</ul>
+</li>
+<li>Con más subniveles ordenados
+<ol>
+<li>Otro elemento</li>
+<li>Otro más
+<ol>
+<li>Otro subnivel más</li>
+</ol>
+</li>
+<li>Y otro más</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p>Aunqeu escriba un 1 NO comienza por 1 si no que sigue por 4. Se utiliza un comentario para reiniciar contador.</p>
+</li>
+</ol>
+<!-- Los comentarios se utilizan para reiniciar las listas numeradas -->
+<ol>
+<li>
+<p>Otra lista (los comentarios se utilizan para reiniciar la numeración de las listas)</p>
+</li>
+<li>
+<p>Otra más</p>
+<pre><code> 2.1. Holas
+
+ 2.2. Dos
+</code></pre>
+</li>
+<li>
+<p>Tres</p>
+</li>
+<li>
+<p>Cuatro</p>
+<pre><code>   .container {
+         Color: #ccc;
+         font: 'arial';
+     }
+</code></pre>
+</li>
+<li>
+<p>Cinco</p>
+<p>5.1. Hola
+5.2. Adiós</p>
+</li>
+<li>
+<p>Seis</p>
+</li>
+<li>
+<p>Siete</p>
+</li>
+<li>
+<p>Hola</p>
+</li>
+</ol>
+<!-- Comentario -->
+<!--include:markdown-it(html) ./notas2.md--><h1>NOTAS-2</h1>
+<p>Para esctibir fórmulas matemáticas se debe instalar un plugin con math. Por ejemplo: markdown-it-math. **</p>
+<p>$$\sqrt{c^2=a^2 + b^2}\div2\flat\sharp$$</p>
+<h2>Seguimos con la SINTÁXIS de Markdown</h2>
+<p>Para generar un nuevo párrafo en Markdown simplemente separa el texto mediante una línea en blanco (pulsando dos veces intro)</p>
+<p>Al igual que sucede con HTML, Markdown no soporta dobles líneas en blanco, así que si intentas generarlas estas se convertirán en una sola al procesarse.</p>
+<p>Para realizar un salto de línea y empezar una frase en una línea siguiente DENTRO DEL MISMO PÁRRAFO, tendrás que pulsar dos veces la barra espaciadora antes de pulsar una vez intro.</p>
+<p>&quot;Andando con sus patitas mojadas,<br>
+el gorrión<br>
+por la terraza de madera&quot;</p>
+<p>Si lo intento sin los espacios en blanco</p>
+<p>al final no funciona. Ver código HTML</p>
+<pre><code>  &lt;p&gt;&quot;Andando con sus patitas mojadas,&lt;br&gt;
+  el gorrión&lt;br&gt;
+  por la terraza de madera&quot;&lt;/p&gt;
+
+  &lt;p&gt;Si lo intento sin los espacios en blanco&lt;/p&gt;
+  &lt;p&gt;al final no funciona. Ver código HTML&lt;/p&gt;
+</code></pre>
+<h3>Esto es un H3</h3>
+<h6>Esto es un H6</h6>
+<h2>Esto es un H2 subrayado con una línea (guiones)</h2>
+<hr>
+<h3>Esto es un H3 subrayado con dos líneas (símbolo igual) - NO FUNCIONA???</h3>
+<hr>
+<hr>
+<p>Las líneas horizontales se forman con 3 o más símbolos:
+asteriscos, guiones o guiones bajos.</p>
+<hr>
+<hr>
+<p>Si los separamos con un espacio también sirve.</p>
+<hr>
+<hr>
+<h2>CITAS</h2>
+<blockquote>
+<p>Las citas se crean con el símbolo
+MAYOR QUE colocándolo al principio de
+cada una de las líneas de la cita. Esto genera
+un <em><strong>blockquote</strong></em></p>
+<blockquote>
+<p>Esto es una cita anidada a la principal</p>
+</blockquote>
+<p>Esta no está anidada.</p>
+</blockquote>
+<h2>Código de bloque PRE + CODE</h2>
+<pre><code>  Código de bloque.
+  Se pueden añadir tantas líneas y párrafos como se quiera.
+
+  Tenemos estas líneas de ejemplo.
+</code></pre>
+<pre><code>  Tenemos el mismo efecto con 3 TABs
+  Como se puede ver en este ejemplo
+</code></pre>
+<h2>Código solo con CODE</h2>
+<p><code>Para texto entre etiquetas CODE usamos back ticks</code></p>
+<h3><strong>Negritas</strong> y <em>cursivas</em></h3>
+<h4><strong>Negritas</strong> y <em>cursivas</em></h4>
+<h5><em><strong>Combinado</strong></em></h5>
+<hr>
+<h2>ENLACES</h2>
+<h3>Enlaces en línea</h3>
+<p>SEGUIMOS POR LOS ENLACES EN LA PÁGINA SIGUIENTE: <a href="https://markdown.es/sintaxis-markdown/">Enlace</a></p>
+<p><a href="http://google.com">Este enlace a _blank NO FUNCIONA!</a>{:target=&quot;_blank&quot;}</p>
+<hr>
+<p><a href="https://google.es" target="_blank">Ir a Google</a></p>
+<hr>
+<h3>Enlaces por referencia (cuando son muchos o muy largos)</h3>
+<p>Lorem ipsum dolor sit <a href="https:google.es">enlace</a> amet consectetur adipisicing elit. Enim dolorum et quos <a href="https:google.es">otro</a> nesciunt perspiciatis veritatis iure sapiente, nostrum omnis nihil accusantium id, <a href="https:google.es">más</a> aliquam deserunt eos placeat expedita, <a href="https:google.es">enlace</a> aperiam rerum eveniet!</p>
+<!-- Al final de la página se suelen poner los enlaces referenciados.
+Como se puede ver en el primer enlace, al ponerlos juntos el enlace OTRO referencia a ENLACE -->
+<h3>Enlaces automáticos</h3>
+<p>Es cuando quieres que el enlace no se enmascare en otra palabra, si no que aparezca tal cual. Por ejemplo: <a href="https://google.es">https://google.es</a></p>
+<hr>
+<h2>IMÁGENES</h2>
+<p>Insertar una imagen es idéntico a los enlaces pero con el símbolo de <code>!</code> al principio del enlace.</p>
+<p><img src="https://picsum.photos/400/100" alt="Texto alternativo para la imagen" title="Título al poner el ratón sobre la imagen"></p>
+<h3>Imágenes por referencia.</h3>
+<p>Para que la escritura sea más limpia, podemos utilizar el mismo método que para los <strong>links</strong>: por referencia.</p>
+<p><img src="https://picsum.photos/400/100?random" alt="Texto alternativo" title="Título alternativo"></p>
+<h2>ESCRIBIR CARACTERES ESPECIALES (asterisco, guiones, almohadilla, etc...)</h2>
+<p>Lo haremos insertando la <code>\</code> delante del símbolo en cuestión. Por ejemplo podemos esctibir la #</p>
+<p class="clase">
+Para escribir párrafos con una clase asignada tendremos que insertar HTML directamente en el MD.
+</p></body></html>

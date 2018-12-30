@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Markdown
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css")
+    //link(href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO", crossorigin="anonymous")
+  body
+    h1 - SINTAXIS BÁSICA DE MAKDOWN
+
+    :markdown-it(html)
+      <p class="green-text text-lighten-3">## Esto es un h2 desde un markdown-it sin include
+      Esto es un párrafo del markdown-it sin include. Para saber que está dentro del comando MARKDOWN-IT deben estar indentados
+
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora in, exercitationem cumque error porro ipsam dicta, velit sed, nobis sint inventore laudantium non omnis. Eum</p>
+
+    a(href="#") Link fuera del markdown
+
+
+   
+    //include:markdown-it(html) ./notas.md
+    include:markdown-it(html) notas.md
+
+    //include:markdown-it(html) ./notas2.md
+    include:markdown-it(html) notas2.md
+

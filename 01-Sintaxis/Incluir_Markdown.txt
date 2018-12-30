@@ -1,0 +1,33 @@
+﻿NOTA IMPORTANTE:
+    Los archivos .MD en VSC se pueden visualizar directamente su salida (arriba en previsualizar)
+
+Para integrar Markdown en PUG
+    Los tengo instalados de forma global pero harían falta
+    npm install --save-dev jstransformer-markdown-it
+    npm install --save-dev pug
+    npm install --save-dev pug-cli
+
+    - arrancamos un watcher para PUG
+    pug -w index.pug
+    - Se genera el index.html y lo abrimos con el live-server
+    // Se puede utilizar de 3 formas
+    //Escribimos lo siguiente
+    //:markdown-it
+    //  Hola humano, este es un **párrafo**. Además este es un link [Google] (http://google.com)
+    :markdown-it
+      Hola humano, este es un **párrafo**. Además este es un link [Google] (http://google.com)
+    // Mezclar MD y HTML estándar
+    //:markdown-it(html)
+    //  ##Hola humano, este no es un **párrafo** es un h2    
+    //  <p>Soy un elemento HTML dentro de Markdown </p>
+    
+    :markdown-it(html)
+      ## Hola humano, este no es un **párrafo** es un h2
+      <p>Soy un elemento HTML dentro de Markdown! </p>
+    //Incluyendo un archivo
+    //include:markdown-it(html) md/example.md
+
+    include:markdown-it(html) ../md/lista.md
+
+
+	
